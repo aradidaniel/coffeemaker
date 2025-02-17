@@ -1,10 +1,10 @@
-package com.accenture.coffeemaker;
+package com.accenture.coffeemaker.resources;
 
-public class BeanTray implements AvailabilityCheckable{
+public class BeanTray implements IBeanTray, AvailabilityCheckable{
     private int beans;
 
     public BeanTray() {
-        this.beans = 10; // Initial amount for 10 cups
+        this.beans = 10;
     }
 
     @Override
@@ -13,16 +13,18 @@ public class BeanTray implements AvailabilityCheckable{
             throw new CoffeeMakerException("Bean tray is empty. Please refill.");
         }
     }
-
+    @Override
     public void decreaseBeans() {
         beans--;
     }
 
+    @Override
     public void fillBeans() {
         beans = 10;
         System.out.println("Bean tray filled. Ready for 10 cups.");
     }
 
+    @Override
     public int getBeans() {
         return beans;
     }

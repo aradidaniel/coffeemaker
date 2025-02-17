@@ -1,6 +1,6 @@
-package com.accenture.coffeemaker;
+package com.accenture.coffeemaker.resources;
 
-public class ServeTray implements AvailabilityCheckable{
+public class ServeTray implements IServeTray, AvailabilityCheckable {
     private boolean hasCup;
 
     public ServeTray() {
@@ -14,15 +14,18 @@ public class ServeTray implements AvailabilityCheckable{
         }
     }
 
+    @Override
     public void placeCup() {
         hasCup = true;
         System.out.println("Cup placed on the serve tray.");
     }
 
+    @Override
     public void removeCup() {
         hasCup = false;
     }
 
+    @Override
     public boolean hasCup() {
         return hasCup;
     }

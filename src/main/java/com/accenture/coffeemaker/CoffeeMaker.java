@@ -1,21 +1,23 @@
 package com.accenture.coffeemaker;
 
-import java.util.List;
+import com.accenture.coffeemaker.resources.*;
 
 public class CoffeeMaker {
-    private BeanTray beanTray;
-    private ServeTray serveTray;
-    private Display display;
+    private final IBeanTray beanTray;
+    private final IServeTray serveTray;
+    private final IDisplay display;
+    private final ResourceManager resourceManager;
 
-    public CoffeeMaker() {
-        this.beanTray = new BeanTray();
-        this.serveTray = new ServeTray();
-        this.display = new Display();
+    public CoffeeMaker(IBeanTray beanTray, IServeTray serveTray, IDisplay display, ResourceManager resourceManager) {
+        this.beanTray = beanTray;
+        this.serveTray = serveTray;
+        this.display = display;
+        this.resourceManager = resourceManager;
     }
 
     public void makeCoffee() {
         try {
-            checkResourceAvailability();
+            resourceManager.checkResources();
             beanTray.decreaseBeans();
             display.showMessage("Coffee is ready! Enjoy your drink.");
             serveTray.removeCup();
@@ -35,16 +37,5 @@ public class CoffeeMaker {
     public void displayStatus() {
         display.showMessage("Bean tray has beans for " + beanTray.getBeans() + " cups.");
         display.showMessage("Cup on serve tray: " + (serveTray.hasCup() ? "Yes" : "No"));
-    }
-
-    private void checkResourceAvailability() throws CoffeeMakerException {
-        List<AvailabilityCheckable> resources = List.of(beanTray, display, serveTray);
-        for (AvailabilityCheckable resource : resources) {
-            resource.checkAvailability();
-        }
-    }
-
-    public Display getDisplay() {
-        return display;
     }
 }
