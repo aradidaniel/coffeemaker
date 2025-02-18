@@ -44,4 +44,5 @@ jobs:
             asset_path: target/CoffeeMaker-1.0-SNAPSHOT.jar
             asset_name: CoffeeMaker-${{ github.ref_name }}.jar
             asset_content_type: application/java-archive
-
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
