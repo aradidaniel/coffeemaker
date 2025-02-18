@@ -46,6 +46,6 @@ This will start the CoffeeMaker application inside the Docker container so that 
 The project includes a GitHub Actions workflow to automate the build, test, and Docker image push process. 
 The workflow is triggered when a new tag is pushed to the repository.
 
-You can find the built artifacts under this [link](ghcr.io/aradidaniel/coffeemaker).
+You can find the built artifacts under this [link](https://github.com/aradidaniel/coffeemaker/pkgs/container/coffeemaker).
 
 
