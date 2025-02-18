@@ -1,8 +1,8 @@
 package com.accenture.coffeemaker;
 
-import com.accenture.coffeemaker.resources.AvailabilityCheckable;
-import com.accenture.coffeemaker.resources.CoffeeMakerException;
-import com.accenture.coffeemaker.resources.ResourceManager;
+import com.accenture.coffeemaker.exceptions.CoffeeMakerException;
+import com.accenture.coffeemaker.interfaces.AvailabilityCheckable;
+import com.accenture.coffeemaker.services.ResourceManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.List;
@@ -44,17 +44,5 @@ class ResourceManagerTest {
 
         verify(resource1).checkAvailability();
         verify(resource2).checkAvailability();
-    }
-
-    @Test
-    void testAddResource() throws CoffeeMakerException {
-        AvailabilityCheckable newResource = mock(AvailabilityCheckable.class);
-        resourceManager.addResource(newResource);
-
-        resourceManager.checkResources();
-
-        verify(resource1).checkAvailability();
-        verify(resource2).checkAvailability();
-        verify(newResource).checkAvailability();
     }
 }

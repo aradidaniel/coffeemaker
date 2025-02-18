@@ -1,4 +1,4 @@
-package com.accenture.coffeemaker.resources;
+package com.accenture.coffeemaker.exceptions;
 
 public class CoffeeMakerException extends Exception {
     public CoffeeMakerException(String message) {

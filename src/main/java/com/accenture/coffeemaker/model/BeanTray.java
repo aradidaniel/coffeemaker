@@ -1,6 +1,10 @@
-package com.accenture.coffeemaker.resources;
+package com.accenture.coffeemaker.model;
 
-public class BeanTray implements IBeanTray, AvailabilityCheckable{
+import com.accenture.coffeemaker.exceptions.CoffeeMakerException;
+import com.accenture.coffeemaker.interfaces.AvailabilityCheckable;
+import com.accenture.coffeemaker.interfaces.IBeanTray;
+
+public class BeanTray implements IBeanTray, AvailabilityCheckable {
     private int beans;
 
     public BeanTray() {

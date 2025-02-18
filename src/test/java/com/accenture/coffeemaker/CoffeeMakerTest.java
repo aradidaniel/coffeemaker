@@ -1,6 +1,11 @@
 package com.accenture.coffeemaker;
 
-import com.accenture.coffeemaker.resources.*;
+import com.accenture.coffeemaker.exceptions.CoffeeMakerException;
+import com.accenture.coffeemaker.interfaces.IBeanTray;
+import com.accenture.coffeemaker.interfaces.IDisplay;
+import com.accenture.coffeemaker.interfaces.IServeTray;
+import com.accenture.coffeemaker.services.CoffeeMaker;
+import com.accenture.coffeemaker.services.ResourceManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

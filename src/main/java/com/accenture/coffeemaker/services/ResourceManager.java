@@ -1,4 +1,7 @@
-package com.accenture.coffeemaker.resources;
+package com.accenture.coffeemaker.services;
+
+import com.accenture.coffeemaker.exceptions.CoffeeMakerException;
+import com.accenture.coffeemaker.interfaces.AvailabilityCheckable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +19,4 @@ public class ResourceManager {
         }
     }
 
-    public void addResource(AvailabilityCheckable resource) {
-        this.resources.add(resource);
-    }
 }

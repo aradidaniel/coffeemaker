@@ -1,4 +1,8 @@
-package com.accenture.coffeemaker.resources;
+package com.accenture.coffeemaker.model;
+
+import com.accenture.coffeemaker.exceptions.CoffeeMakerException;
+import com.accenture.coffeemaker.interfaces.AvailabilityCheckable;
+import com.accenture.coffeemaker.interfaces.IServeTray;
 
 public class ServeTray implements IServeTray, AvailabilityCheckable {
     private boolean hasCup;

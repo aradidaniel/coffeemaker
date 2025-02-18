@@ -1,4 +1,4 @@
-package com.accenture.coffeemaker.resources;
+package com.accenture.coffeemaker.interfaces;
 
 public interface IServeTray {
     void placeCup();

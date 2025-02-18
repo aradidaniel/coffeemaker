@@ -1,6 +1,9 @@
-package com.accenture.coffeemaker;
+package com.accenture.coffeemaker.services;
 
-import com.accenture.coffeemaker.resources.*;
+import com.accenture.coffeemaker.exceptions.CoffeeMakerException;
+import com.accenture.coffeemaker.interfaces.IBeanTray;
+import com.accenture.coffeemaker.interfaces.IDisplay;
+import com.accenture.coffeemaker.interfaces.IServeTray;
 
 public class CoffeeMaker {
     private final IBeanTray beanTray;

@@ -1,7 +1,7 @@
 package com.accenture.coffeemaker;
 
-import com.accenture.coffeemaker.resources.BeanTray;
-import com.accenture.coffeemaker.resources.CoffeeMakerException;
+import com.accenture.coffeemaker.exceptions.CoffeeMakerException;
+import com.accenture.coffeemaker.model.BeanTray;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

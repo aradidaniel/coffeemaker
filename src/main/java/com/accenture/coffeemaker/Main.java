@@ -1,6 +1,10 @@
 package com.accenture.coffeemaker;
 
-import com.accenture.coffeemaker.resources.*;
+import com.accenture.coffeemaker.model.BeanTray;
+import com.accenture.coffeemaker.model.Display;
+import com.accenture.coffeemaker.model.ServeTray;
+import com.accenture.coffeemaker.services.CoffeeMaker;
+import com.accenture.coffeemaker.services.ResourceManager;
 
 import java.util.List;
 import java.util.Scanner;
