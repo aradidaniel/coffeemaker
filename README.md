@@ -15,6 +15,9 @@ The CoffeeMaker system is a Java-based application that simulates the functional
     - **Option 2**: Fill the bean tray.
     - **Option 3**: Place a cup on the serve tray.
     - **Option 4**: Shut down the coffee machine.
+   
+
+Alternatively you can also find the JAR files under the [releases](https://github.com/aradidaniel/coffeemaker/releases). 
 
 ## Docker
 The CoffeeMaker system can be containerized using Docker. This allows for easy deployment and consistent environments across different systems.
