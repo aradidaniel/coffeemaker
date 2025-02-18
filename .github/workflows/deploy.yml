@@ -37,12 +37,10 @@ jobs:
       - name: Push Docker image
         run: docker push ghcr.io/aradidaniel/coffeemaker:${{ github.ref_name }}
 
-      - name: Upload JAR to Release
-        uses: actions/upload-release-asset@v1
-        with:
-            upload_url: ${{ github.event.release.upload_url }}
-            asset_path: target/CoffeeMaker-1.0-SNAPSHOT.jar
-            asset_name: CoffeeMaker-${{ github.ref_name }}.jar
-            asset_content_type: application/java-archive
+      - name: Upload JAR to GitHub Release
+        run: |
+          mv target/CoffeeMaker-1.0-SNAPSHOT.jar target/CoffeeMaker-${{ github.ref_name }}.jar
+          gh release upload ${{ github.ref_name }} target/CoffeeMaker-${{ github.ref_name }}.jar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
