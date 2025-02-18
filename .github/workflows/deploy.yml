@@ -41,7 +41,7 @@ jobs:
         uses: actions/upload-release-asset@v1
         with:
             upload_url: ${{ github.event.release.upload_url }}
-            asset_path: target/*.jar
+            asset_path: target/CoffeeMaker-1.0-SNAPSHOT.jar
             asset_name: CoffeeMaker-${{ github.ref_name }}.jar
             asset_content_type: application/java-archive
 
