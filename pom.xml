@@ -6,7 +6,7 @@
 
     <groupId>com.accenture.coffeemaker</groupId>
     <artifactId>CoffeeMaker</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
