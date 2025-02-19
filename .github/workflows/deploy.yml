@@ -38,9 +38,7 @@ jobs:
         run: docker push ghcr.io/aradidaniel/coffeemaker:${{ github.ref_name }}
 
       - name: Upload JAR to GitHub Release
-        run: |
-          mv target/CoffeeMaker-1.0-SNAPSHOT.jar target/CoffeeMaker-${{ github.ref_name }}.jar
-          gh release upload ${{ github.ref_name }} target/CoffeeMaker-${{ github.ref_name }}.jar
+        run: gh release upload ${{ github.ref_name }} target/CoffeeMaker-${{ github.ref_name }}.jar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
