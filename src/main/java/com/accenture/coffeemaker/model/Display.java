@@ -8,6 +8,7 @@ public class Display implements IDisplay, AvailabilityCheckable {
     @Override
     public void checkAvailability() {
     }
+    String lol;
 
     @Override
     public void showMessage(String message) {
